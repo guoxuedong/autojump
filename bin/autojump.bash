@@ -53,7 +53,7 @@ esac
 
 
 # default autojump command
-j() {
+n() {
     if [[ ${1} == -* ]] && [[ ${1} != "--" ]]; then
         autojump ${@}
         return
@@ -77,18 +77,18 @@ j() {
 
 
 # jump to child directory (subdirectory of current path)
-jc() {
+ncc() {
     if [[ ${1} == -* ]] && [[ ${1} != "--" ]]; then
         autojump ${@}
         return
     else
-        j $(pwd) ${@}
+        n $(pwd) ${@}
     fi
 }
 
 
 # open autojump results in file browser
-jo() {
+no() {
     if [[ ${1} == -* ]] && [[ ${1} != "--" ]]; then
         autojump ${@}
         return
@@ -120,11 +120,11 @@ jo() {
 
 
 # open autojump results (child directory) in file browser
-jco() {
+nco() {
     if [[ ${1} == -* ]] && [[ ${1} != "--" ]]; then
         autojump ${@}
         return
     else
-        jo $(pwd) ${@}
+        no $(pwd) ${@}
     fi
 }

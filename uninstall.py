@@ -86,7 +86,7 @@ def remove_custom_installation(args, dryrun=False):
         rm(os.path.join(share_dir, 'autojump.fish'), dryrun)
         rm(os.path.join(share_dir, 'autojump.tcsh'), dryrun)
         rm(os.path.join(share_dir, 'autojump.zsh'), dryrun)
-        rm(os.path.join(zshshare_dir, '_j'), dryrun)
+        rm(os.path.join(zshshare_dir, '_n'), dryrun)
     rmdir(share_dir, dryrun)
     rm(os.path.join(doc_dir, 'autojump.1'), dryrun)
 
@@ -136,7 +136,7 @@ def remove_system_installation(dryrun=False):
     rm(os.path.join(share_dir, 'autojump.fish'), dryrun)
     rm(os.path.join(share_dir, 'autojump.tcsh'), dryrun)
     rm(os.path.join(share_dir, 'autojump.zsh'), dryrun)
-    rm(os.path.join(zshshare_dir, '_j'), dryrun)
+    rm(os.path.join(zshshare_dir, '_n'), dryrun)
     rmdir(share_dir, dryrun)
     rm(os.path.join(doc_dir, 'autojump.1'), dryrun)
 

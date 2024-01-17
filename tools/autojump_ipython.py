@@ -23,7 +23,7 @@ ip = get_ipython()  # noqa
 
 
 @register_line_magic
-def j(path):
+def n(path):
     cmd = ['autojump'] + path.split()
     newpath = Popen(
         cmd,
@@ -36,4 +36,4 @@ def j(path):
 
 
 # remove from namespace
-del j
+del n

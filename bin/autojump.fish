@@ -12,7 +12,7 @@ end
 
 
 # enable tab completion
-complete -x -c j -a '(autojump --complete (commandline -t))'
+complete -x -c n -a '(autojump --complete (commandline -t))'
 
 
 # set error file location
@@ -43,7 +43,7 @@ function __aj_err
 end
 
 # default autojump command
-function j
+function n
     switch "$argv"
         case '-*' '--*'
             autojump $argv
@@ -69,18 +69,18 @@ end
 
 
 # jump to child directory (subdirectory of current path)
-function jc
+function ncc
     switch "$argv"
         case '-*'
-            j $argv
+            n $argv
         case '*'
-            j (pwd) $argv
+            n (pwd) $argv
     end
 end
 
 
 # open autojump results in file browser
-function jo
+function no
     set -l output (autojump $argv)
     if test -d "$output"
         switch $OSTYPE
@@ -102,11 +102,11 @@ end
 
 
 # open autojump results (child directory) in file browser
-function jco
+function nco
     switch "$argv"
         case '-*'
-            j $argv
+            n $argv
         case '*'
-            jo (pwd) $argv
+            no (pwd) $argv
     end
 end
